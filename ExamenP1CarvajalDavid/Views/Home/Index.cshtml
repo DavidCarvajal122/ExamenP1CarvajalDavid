@@ -2,16 +2,17 @@
     ViewData["Title"] = "Inicio";
 }
 
-<h1>Bienvenido al sistema de gestión</h1>
+<div class="text-center">
+    <h1 class="display-4">Bienvenido al sistema de gestión</h1>
 
-<p>
-    <a asp-action="Index" asp-controller="Cliente" class="btn btn-primary">Gestionar Clientes</a>
-</p>
+    <img src="https://pbs.twimg.com/media/FLF6tHIWUAYjBlq.jpg" alt="Imagen de Portada" class="imagen-portada">
 
-<p>
-    <a asp-action="Index" asp-controller="PlanRecompensa" class="btn btn-secondary">Gestionar Planes de Recompensa</a>
-</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a asp-action="Index" asp-controller="Cliente" class="btn btn-primary">Gestionar Clientes</a>
+        <a asp-action="Index" asp-controller="PlanRecompensa" class="btn btn-secondary">Gestionar Planes de Recompensa</a>
+        <a asp-action="Index" asp-controller="Reserva" class="btn btn-success">Gestionar Reservas</a>
+    </div>
+</div>
 
-<p>
-    <a asp-action="Index" asp-controller="Reserva" class="btn btn-success">Gestionar Reservas</a>
-</p>
+
+}

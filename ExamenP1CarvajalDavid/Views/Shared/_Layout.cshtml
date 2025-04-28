@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ExamenP1CarvajalDavid.styles.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <header>
@@ -41,9 +42,7 @@
             &copy; 2025 - ExamenP1CarvajalDavid - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
         <div class="container">
-            <p><strong>Nombre:</strong>David Carvajal</p>
-            <p><strong>Carrera:</strong>Ing. Software</p>
-            <p><strong>Descripción:</strong> Soy un estudiante de la carrera de Ingeniería de Software, siempre me ha gustado la programación aunque no se me dé del todo bien, siempre estoy dispuesto a intentar aprender lo que más puedo!</p>
+            <p><strong>Descripción:</strong> Soy David Carvajal, mis hobbies son la natación y las artes marciales</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
