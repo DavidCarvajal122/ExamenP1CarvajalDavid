@@ -19,15 +19,14 @@ namespace ExamenP1CarvajalDavid.Controllers
             var lista = _context.Clientes.ToList();
             return View(lista);
         }
-
-        public IActionResult Crear()
+        public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Crear(Cliente cliente)
+        public IActionResult Create(Cliente cliente)
         {
             if (ModelState.IsValid)
             {
