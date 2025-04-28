@@ -5,13 +5,11 @@ namespace ExamenP1CarvajalDavid.Controllers
 {
     public class PlanRecompensa : Controller
     {
-        // GET: PlanRecompensa
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: PlanRecompensa/Details/5
         public ActionResult Details(int id)
         {
             return View();

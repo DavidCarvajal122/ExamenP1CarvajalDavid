@@ -1,16 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ExamenP1CarvajalDavid.Data;
+using ExamenP1CarvajalDavid.Models;
+
 
 namespace ExamenP1CarvajalDavid.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-    using HotelReservaMVC.Data;
-    using HotelReservaMVC.Models;
-    using System.Linq;
-    using ExamenP1CarvajalDavid.Models;
 
-    namespace HotelReservaMVC.Controllers
-    {
         public class ClienteController : Controller
         {
             private readonly ApplicationDbContext _context;
@@ -20,20 +16,17 @@ namespace ExamenP1CarvajalDavid.Controllers
                 _context = context;
             }
 
-            // Mostrar todos los clientes
             public IActionResult Index()
             {
                 var lista = _context.Clientes.ToList();
                 return View(lista);
             }
 
-            // Formulario para crear cliente
             public IActionResult Crear()
             {
                 return View();
             }
 
-            // Guardar cliente
             [HttpPost]
             public IActionResult Crear(Cliente cliente)
             {
@@ -46,7 +39,6 @@ namespace ExamenP1CarvajalDavid.Controllers
                 return View(cliente);
             }
 
-            // Formulario para editar cliente
             public IActionResult Editar(int id)
             {
                 var cliente = _context.Clientes.Find(id);
@@ -57,7 +49,7 @@ namespace ExamenP1CarvajalDavid.Controllers
                 return View(cliente);
             }
 
-            // Guardar cambios
+
             [HttpPost]
             public IActionResult Editar(Cliente cliente)
             {
@@ -70,7 +62,6 @@ namespace ExamenP1CarvajalDavid.Controllers
                 return View(cliente);
             }
 
-            // Ver detalles
             public IActionResult Detalles(int id)
             {
                 var cliente = _context.Clientes.Find(id);
@@ -81,7 +72,6 @@ namespace ExamenP1CarvajalDavid.Controllers
                 return View(cliente);
             }
 
-            // Confirmar eliminar
             public IActionResult Eliminar(int id)
             {
                 var cliente = _context.Clientes.Find(id);
@@ -92,7 +82,7 @@ namespace ExamenP1CarvajalDavid.Controllers
                 return View(cliente);
             }
 
-            // Borrar cliente
+
             [HttpPost, ActionName("Eliminar")]
             public IActionResult EliminarConfirmado(int id)
             {
