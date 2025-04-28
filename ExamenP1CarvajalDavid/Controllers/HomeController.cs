@@ -6,6 +6,7 @@ namespace ExamenP1CarvajalDavid.Controllers
 {
     public class HomeController : Controller
     {
+        //Commit de prueba
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
